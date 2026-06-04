@@ -6,6 +6,16 @@ Descrição
 -
 Este repositório contém uma aplicação React (estrutura CRA) com páginas: Home, Informação e Formulário. O site foi criado para demonstrar rotas com `react-router-dom`, CSS Modules e componentes reutilizáveis (Footer).
 
+## Sobre o projeto
+
+O projeto **Toram** foi desenvolvido como um trabalho de estudo para praticar conceitos de desenvolvimento front-end com React. Ele mostra:
+
+- Navegação entre páginas usando `react-router-dom`.
+- Estilização modular com CSS Modules para evitar conflitos de escopo.
+- Componentização (por exemplo, `Footer`) e organização de pastas.
+
+Objetivos educacionais: estruturar um projeto React simples, entender roteamento, gerenciar assets locais (imagens) e preparar o projeto para publicação no GitHub.
+
 Principais funcionalidades
 -
 - Página **Home** com navegação para outras páginas.
