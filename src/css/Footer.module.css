@@ -1,0 +1,28 @@
+/* Footer.module.css define a aparência do rodapé com os termos de serviço. */
+.footer {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.text {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+code {
+  background: rgba(148, 163, 184, 0.15);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.35rem;
+}

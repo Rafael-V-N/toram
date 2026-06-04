@@ -1,0 +1,121 @@
+/* Home.module.css define o estilo da página inicial do site informativo. */
+.homePage {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+}
+
+.contentWrapper {
+  width: min(1200px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.label {
+  margin: 0;
+  color: #2563eb;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(2.75rem, 4vw, 4.5rem);
+  line-height: 1.05;
+  color: #0f172a;
+}
+
+.text {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.actionButton {
+  width: fit-content;
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 999px;
+  background: #3b82f6;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.actionButton:hover {
+  background: #2563eb;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 1rem 1.8rem;
+  border: 2px solid #3b82f6;
+  border-radius: 999px;
+  background: transparent;
+  color: #3b82f6;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.imageCaption {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 960px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .rightPanel {
+    order: -1;
+  }
+}

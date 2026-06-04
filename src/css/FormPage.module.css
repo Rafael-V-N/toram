@@ -1,0 +1,94 @@
+/* FormPage.module.css estiliza o formulário de personagem com campos e botões claros. */
+.formPage {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.header {
+  width: min(820px, 100%);
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  color: #0f172a;
+}
+
+.subtitle {
+  margin: 0;
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.form {
+  width: min(820px, 100%);
+  display: grid;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 22px 56px rgba(148, 163, 184, 0.12);
+}
+
+.label {
+  display: grid;
+  gap: 0.5rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.9rem;
+  font-size: 1rem;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitButton {
+  width: fit-content;
+  padding: 0.95rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  background: #3b82f6;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #2563eb;
+}
+
+.successMessage {
+  margin: 0;
+  color: #047857;
+  font-weight: 700;
+}
+
+.backLink {
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
