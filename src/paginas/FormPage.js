@@ -7,6 +7,7 @@ function FormPage() {
   // formData armazena os valores dos campos do formulário
   const [formData, setFormData] = useState({ name: '', characterClass: 'samurai', timePlayed: 'menos-de-1-mes' });
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({ name: '' });
 
   // Atualiza o estado do formulário sempre que um campo mudar
   const handleChange = (event) => {
@@ -17,6 +18,20 @@ function FormPage() {
   // Envia o formulário localmente e marca como enviado
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Validação simples: nome é obrigatório
+    const newErrors = {};
+    if (!formData.name || !formData.name.trim()) {
+      newErrors.name = 'O nome é obrigatório.';
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setSubmitted(false);
+      return;
+    }
+
+    setErrors({ name: '' });
     setSubmitted(true);
   };
 
@@ -32,15 +47,23 @@ function FormPage() {
       <form className={styles.form} onSubmit={handleSubmit}>
         <label className={styles.label} htmlFor="name">
           Nome
-          <input
-            id="name"
-            name="name"
-            type="text"
-            value={formData.name}
-            onChange={handleChange}
-            className={styles.input}
-            placeholder="Digite seu nome"
-          />
+            <input
+              id="name"
+              name="name"
+              type="text"
+              value={formData.name}
+              onChange={handleChange}
+              className={styles.input}
+              placeholder="Digite seu nome"
+              required
+              aria-invalid={errors.name ? 'true' : 'false'}
+              aria-describedby={errors.name ? 'name-error' : undefined}
+            />
+            {errors.name && (
+              <span id="name-error" className={styles.errorMessage} role="alert">
+                {errors.name}
+              </span>
+            )}
         </label>
 
         <label className={styles.label} htmlFor="characterClass">
@@ -51,6 +74,7 @@ function FormPage() {
             value={formData.characterClass}
             onChange={handleChange}
             className={styles.input}
+            required
           >
             <option value="samurai">Samurai</option>
             <option value="guerreiro">Guerreiro</option>
@@ -66,6 +90,7 @@ function FormPage() {
             value={formData.timePlayed}
             onChange={handleChange}
             className={styles.input}
+            required
           >
             <option value="menos-de-1-mes">Menos de 1 mês</option>
             <option value="1-a-6-meses">1 a 6 meses</option>
@@ -77,9 +102,9 @@ function FormPage() {
           Enviar
         </button>
 
-        {submitted && (
+        {submitted && !errors.name && (
           <p className={styles.successMessage}>
-            Personagem criado: {formData.name || 'Sem nome'} ({formData.characterClass}) - Tempo de jogo: {formData.timePlayed.replace(/-/g, ' ')}.
+            Personagem criado: {formData.name} ({formData.characterClass}) - Tempo de jogo: {formData.timePlayed.replace(/-/g, ' ')}.
           </p>
         )}
       </form>
