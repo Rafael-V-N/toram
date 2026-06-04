@@ -1,3 +1,65 @@
+# Toram
+
+Projeto de exemplo chamado **Toram** — site simples em React criado como trabalho escolar.
+
+Descrição
+-
+Este repositório contém uma aplicação React (estrutura CRA) com páginas: Home, Informação e Formulário. O site foi criado para demonstrar rotas com `react-router-dom`, CSS Modules e componentes reutilizáveis (Footer).
+
+Principais funcionalidades
+-
+- Página **Home** com navegação para outras páginas.
+- Página **Info** com conteúdo descritivo e imagem ilustrativa.
+- Página **Formulário** com campo de nome e seleção de classe (Samurai, Guerreiro, Mago).
+- Footer em todas as páginas com termos de serviço.
+- Estilização com CSS Modules por página.
+
+Como executar (desenvolvimento)
+-
+1. Instale dependências:
+
+```bash
+npm install
+```
+
+2. Inicie o servidor de desenvolvimento:
+
+```bash
+npm start
+```
+
+3. Abra http://localhost:3000 no navegador.
+
+Scripts úteis
+-
+- `npm start` — inicia o servidor de desenvolvimento.
+- `npm run build` — cria a build para produção.
+- `npm test` — executa os testes (se houver).
+
+Estrutura importante
+-
+- `src/paginas/` — contém `Home.js`, `InfoPage.js`, `FormPage.js`.
+- `src/componentes/layout/Footer.jsx` — footer com termos de serviço.
+- `src/imagens/` — imagens do projeto (redimensionadas para melhor resolução).
+- `src/*.module.css` — CSS Modules por página.
+
+Notas sobre alterações
+-
+- O nome do site foi alterado para **Toram**.
+- Todas as páginas receberam descrições e comentários no código para facilitar manutenção.
+- Imagens foram redimensionadas para melhorar a aparência e tempo de carregamento.
+
+Contribuição
+-
+Este repositório é um trabalho pessoal. Para contribuições: abra uma branch, faça alterações e envie um Pull Request.
+
+Licença
+-
+Escolha uma licença adequada ao compartilhar (por padrão, nenhum arquivo de licença foi adicionado).
+
+Contato
+-
+Criado por Rafael. Repositório remoto: https://github.com/Rafael-V-N/toram
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
